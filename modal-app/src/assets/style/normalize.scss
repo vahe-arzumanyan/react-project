@@ -181,3 +181,23 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance : textfield;
 }
+
+.G-image-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.G-image-contain {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.G-container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
