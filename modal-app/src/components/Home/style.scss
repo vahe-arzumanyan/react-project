@@ -1,0 +1,31 @@
+@import "./src/assets/style/normalize";
+
+body{
+  background-color: red;
+}
+
+.P-wrapper {
+  width: 100%;
+  height: 500px;
+}
+.P-wrapper-logo-info{
+margin:80px;
+}
+P-wrapper-logo {
+  width: 60px;
+  height: 60px;
+
+
+}
+
+.P-wrapper-logo-title {
+  font-size: 20px;
+  color: white;
+  font-family: monospace;
+}
+
+.P-wrapper-logo-text {
+  font-size: 16px;
+  color: white;
+  font-family: monospace;
+}
