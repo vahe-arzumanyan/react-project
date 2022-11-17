@@ -15,13 +15,13 @@ class App extends React.Component {
             <Wallpaper/>
             <ul>
                 <li>
-                    <Link to={'/home'}>Home</Link>
+                    <NavLink to={'/home'}>Home</NavLink>
                 </li>
                 <li>
-                    <Link to={'/about'}>About</Link>
+                    <NavLink to={'/about'}>About</NavLink>
                 </li>
                 <li>
-                    <Link to={'/contact'}>Contact</Link>
+                    <NavLink to={'/contact'}>Contact</NavLink>
                 </li>
             </ul>
             <Switch>
@@ -30,8 +30,6 @@ class App extends React.Component {
                 <Route path={'/contact'} component={Contact}/>
                 <Redirect to={'/contact'} />
             </Switch>
-
-
         </>
     }
 }
