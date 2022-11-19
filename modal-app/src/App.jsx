@@ -17,10 +17,10 @@ class App extends React.Component {
 
 
             <Switch>
-                {/*<Route path={'/home'} component={Home}/>*/}
-                {/*<Route path={'/about'} component={About}/>*/}
-                {/*<Route path={'/contact'} component={Contact}/>*/}
-                {/*<Redirect to={'/Home'}/>*/}
+                <Route path={'/home'} component={Home}/>
+                <Route path={'/about'} component={About}/>
+                <Route path={'/contact'} component={Contact}/>
+                <Redirect to={'/Home'}/>
             </Switch>
         </>
     }
