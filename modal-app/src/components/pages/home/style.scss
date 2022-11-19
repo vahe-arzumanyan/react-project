@@ -1,6 +1,20 @@
-
-.P-home{
-  width: 100%;
+.P-category-list {
+  font-size: 26px;
 }
 
+.P-category-list ul li {
+  font-size: 20px;
+  mso-hansi-font-family: fantasy;
+  color: #2F956D;
+  border: 2px solid #2F956D;
+  padding: 5px 25px;
+  transition: 0.3s;
+  margin: 0 30px;
+}
+
+.P-category-list ul li:hover,
+.P-category-list ul li.menu-page{
+  background-color: #2f956d;
+  color: white;
+}
 

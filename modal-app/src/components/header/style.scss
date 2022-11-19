@@ -11,12 +11,13 @@
 .P-wrapper-logo {
   width: 60px;
   height: 60px;
+  margin: 0 15px 0 0;
 }
 
 .P-wrapper-logo-title {
-  font-size: 20px;
+  font-size: 28px;
   color: white;
-  font-family: monospace;
+  font-family: "Microsoft YaHei UI";
 }
 
 .P-wrapper-logo-text {
@@ -31,8 +32,12 @@
   a {
     text-decoration: none;
     font-size: 20px;
-    font-family:sans-serif;
+    font-family: sans-serif;
     color: #ffffff;
     margin: 0 15px;
   }
+}
+
+.P-nav-bottom {
+  margin: 10px 0 40px 0;
 }

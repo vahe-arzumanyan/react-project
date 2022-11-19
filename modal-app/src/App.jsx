@@ -13,16 +13,14 @@ import {Switch, Route, NavLink, Link, Redirect} from 'react-router-dom';
 class App extends React.Component {
     render() {
         return <>
-            <Header/>
-
-
+            <Header />
             <Switch>
                 <Route path={'/home'} component={Home}/>
                 <Route path={'/about'} component={About}/>
                 <Route path={'/contact'} component={Contact}/>
                 <Redirect to={'/Home'}/>
             </Switch>
-        </>
+    </>
     }
 }
 
