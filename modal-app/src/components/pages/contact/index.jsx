@@ -6,7 +6,7 @@ import './style.scss';
 class Contact extends React.Component {
     render() {
         return <div className={'P-contact'}>
-<p>Contact</p>
+{/*<p>Contact</p>*/}
         </div>
 
     }
