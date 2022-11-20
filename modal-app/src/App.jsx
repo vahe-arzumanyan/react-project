@@ -6,6 +6,7 @@ import Header from './components/header/index';
 import Home from './components/pages/home/index';
 import About from './components/pages/about/index';
 import Contact from './components/pages/contact/index';
+import Footer from './components/footer/index';
 
 import {Switch, Route, NavLink, Link, Redirect} from 'react-router-dom';
 

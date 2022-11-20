@@ -1,5 +1,7 @@
+// ================================== section 1 ==================================
 .P-category-list {
   font-size: 26px;
+  margin: 15px 0;
 }
 
 .P-category-list ul li {
@@ -13,8 +15,38 @@
 }
 
 .P-category-list ul li:hover,
-.P-category-list ul li.menu-page{
+.P-category-list ul li.menu-page {
   background-color: #2f956d;
   color: white;
 }
 
+// ================================== section 2 ==================================
+
+.P-avocado-content {
+  margin: 50px 0;
+}
+
+.P-img-avocado {
+  max-width: 650px;
+  width: 100%;
+  height: 300px;
+}
+
+.P-avocado-info {
+  width: 500px;
+  margin-left: 30px;
+}
+
+.P-avocado-title {
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #5279EC;
+}
+
+.P-avocado-text {
+  font-size: 20px;
+  font-family: "Sitka Heading";
+  color: gray;
+  margin-top: 30px;
+
+}

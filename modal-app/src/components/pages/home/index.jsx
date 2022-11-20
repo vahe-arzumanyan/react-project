@@ -10,6 +10,8 @@ import img5 from '../../../assets/image/foodList/05.jpg';
 import img6 from '../../../assets/image/foodList/06.jpg';
 import img7 from '../../../assets/image/foodList/07.jpg';
 import img8 from '../../../assets/image/foodList/08.jpg';
+import avocado from '../../../assets/image/img-01.jpg';
+import logo from "../../../assets/image/simple-house-logo.png";
 
 
 class Home extends React.Component {
@@ -82,7 +84,7 @@ class Home extends React.Component {
             }
         ],
         filterFood: [],
-        activeFoodTab: 'All'
+        activeFoodTab: 'Salad'
     }
 
     selectMenuPage = (menuName) => {
@@ -90,7 +92,7 @@ class Home extends React.Component {
         if (menuName !== 'All') {
             newCategory = this.state.products.filter(x => x.category === menuName)
         } else {
-            newCategory = this.products;
+            newCategory = this.state.products;
         }
         this.setState({filterFood: newCategory, activeFoodTab: menuName})
     }
@@ -98,9 +100,11 @@ class Home extends React.Component {
 
     render() {
         return <>
+            {/* ================================== static title ================================== */}
             <section className={'G-container'}>
                 <StaticTitle title="Welcome To Simple House"
                              description='Total 3 HTML pages are included in this template. Header image has a parallax effect. You can feel free to download, edit and use this TemplateMo layout for your commercial or non-commercial websites.'/>
+                {/* ================================== section 1 ==================================*/}
             </section>
             <section className={'G-container'}>
                 <div className={"G-flex G-center P-category-list"}>
@@ -109,7 +113,7 @@ class Home extends React.Component {
                             onClick={() => this.selectMenuPage('All')}>All
                         </li>
                         <li className={`${this.state.activeFoodTab === 'Pizza' ? 'menu-page' : ""}`}
-                            onClick={()=> this.selectMenuPage('Pizza')}>Pizza
+                            onClick={() => this.selectMenuPage('Pizza')}>Pizza
                         </li>
                         <li className={`${this.state.activeFoodTab === 'Salad' ? 'menu-page' : ""}`}
                             onClick={() => this.selectMenuPage('Salad')}>Salad
@@ -119,15 +123,32 @@ class Home extends React.Component {
                         </li>
                     </ul>
                 </div>
+                {/* ================================== section 2 ==================================*/}
             </section>
             <section className={'G-container'}>
-                {this.state.filterFood.map((item, index) => (
-                    <FoodBoxList
-                        box={item}
-                        key={index}/>
-                ))}
+                <div className={'G-flex G-center G-flex-wrap G-justify-between'}>
+                    {this.state.filterFood.map((item, index) => (
+                        <FoodBoxList
+                            box={item}
+                            key={index}
+                        />
+                    ))
+                    }
+                </div>
             </section>
-
+            <section className={'G-container'}>
+                <div className={'G-flex G-flex-row P-avocado-content'}>
+                    <div className={'G-image-cover P-img-avocado'} style={{backgroundImage: `url('${avocado}')`}}></div>
+                    <div className={'G-flex G-flex-column P-avocado-info'}>
+                        <p className={'P-avocado-title'}>Maecenas nulla neque</p>
+                        <h3 className={'P-avocado-text'}>Redistributing this template as a downloadable ZIP file on any
+                            template collection site is strictly prohibited. You will need to talk to us for additional
+                            permissions about our templates. Thank you.</h3>
+                    </div>
+                </div>
+            </section>
+        {/* ================================== footer ================================== */}
+        <footer />
         </>
     }
 }
