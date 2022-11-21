@@ -1,7 +1,8 @@
 import React from "react";
 import './style.scss';
-import StaticTitle from "../../header-static-title/index";
+import StaticTitle from '../../header-static-title/index';
 import FoodBoxList from '../home/foodBoxList/index';
+import Footer from '../../footer/index';
 import img1 from '../../../assets/image/foodList/01.jpg';
 import img2 from '../../../assets/image/foodList/02.jpg';
 import img3 from '../../../assets/image/foodList/03.jpg';
@@ -11,7 +12,6 @@ import img6 from '../../../assets/image/foodList/06.jpg';
 import img7 from '../../../assets/image/foodList/07.jpg';
 import img8 from '../../../assets/image/foodList/08.jpg';
 import avocado from '../../../assets/image/img-01.jpg';
-import logo from "../../../assets/image/simple-house-logo.png";
 
 
 class Home extends React.Component {
@@ -147,8 +147,11 @@ class Home extends React.Component {
                     </div>
                 </div>
             </section>
-        {/* ================================== footer ================================== */}
-        <footer />
+
+            {/* ================================== footer ================================== */}
+
+            <Footer/>
+
         </>
     }
 }
