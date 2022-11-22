@@ -1,3 +1,42 @@
 @import '../modal-app/src/assets/style/index';
 @import "../src/assets/icon-fonts/icomoon-v1.0/style.css";
 
+input{
+  width: 300px;
+  height: 50px;
+  color: #3e8080;
+  margin:10px;
+  font-size: 30px;
+  font-family: "Nirmala UI";
+}
+
+input[type=text]{
+  border: 1px solid red;
+}
+
+input[type=email]{
+  border: 1px solid red;
+}
+
+input[type=tell]{
+  border: 1px solid red;
+}
+
+.P-company{
+  width: 610px;
+}
+
+.P-email{
+  width: 610px;
+}
+
+.P-subject{
+  width: 610px;
+}
+
+input[type=radio]{
+  background-color: red;
+  font-size: 20px;
+
+}
+

@@ -2,25 +2,83 @@ import React from "react";
 import './App.scss';
 import './index';
 import './assets/style/index.scss';
-import Header from './components/header/index';
-import Home from './components/pages/home/index';
-import About from './components/pages/about/index';
-import Contact from './components/pages/contact/index';
-
-import {Switch, Route, NavLink, Link, Redirect} from 'react-router-dom';
 
 
 class App extends React.Component {
+
+    static = {
+        formaData: {
+            firstName: '',
+            lastName: '',
+            email: '',
+            address: '',
+            password: ''
+        },
+        errorData: {
+            firstName: '',
+            lastName: '',
+            email: '',
+            address: '',
+            password: ''
+        }
+    }
+
     render() {
-        return <>
-            <Header />
-            <Switch>
-                <Route path={'/home'} component={Home}/>
-                <Route path={'/about'} component={About}/>
-                <Route path={'/contact'} component={Contact}/>
-                <Redirect to={'/Home'}/>
-            </Switch>
-    </>
+        return <div className={'G-container'}>
+            <div className={'G-flex G-center G-flex-column'}>
+                <div className={'G-flex G-center'}>
+                    <p>Name</p>
+                    <label>
+                        <input type={'text'}/>
+                    </label>
+                    <label>
+                        <input type={'text'}/>
+                    </label>
+                </div>
+
+                <div className={'G-flex'}>
+                    <p>Company</p>
+                    <label>
+                        <input type={'text'} className={'P-company'}/>
+                    </label>
+                </div>
+
+                <div className={'G-flex'}>
+                    <p>Email</p>
+                    <label>
+                        <input type={'email'} className={'P-email'}/>
+                    </label>
+                </div>
+
+                <div className={'G-flex'}>
+                    <p>Phone</p>
+                    <label>
+                        <input placeholder={'+374'} type={'tell'}/>
+                    </label>
+                    <label>
+                        <input type={'tell'}/>
+                    </label>
+                </div>
+
+                <div className={'G-flex'}>
+                    <p>Subject</p>
+                    <label>
+                        <input type={'text'} className={'P-subject'}/>
+                    </label>
+                </div>
+
+                <div>
+                    <p>Are you an existing customer?</p>
+                    <lebel>
+                        <input type={'radio'} className={'P-radio'}/>
+                    </lebel>
+                    <legenl>
+                        <input type={'radio'} className={'P-radio'}/>
+                    </legenl>
+                </div>
+            </div>
+        </div>
+
     }
 }
 
