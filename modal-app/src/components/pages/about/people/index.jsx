@@ -3,7 +3,7 @@ import './style.scss';
 
 class People extends React.Component {
     render() {
-        return <section className={'G-flex hh'}>
+        return <section className={'G-flex P-person-box'}>
                 <div className={'G-image-cover P-img-person'} style={{backgroundImage: `url('${this.props.person.img}')`}}
                      alt={this.props.person.alt}/>
                 <div className={'G-flex G-flex-column'}>

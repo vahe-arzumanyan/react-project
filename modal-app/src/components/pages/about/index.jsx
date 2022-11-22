@@ -6,8 +6,7 @@ import person2 from '../../../assets/image/person/about-02.jpg';
 import person3 from '../../../assets/image/person/about-03.jpg';
 import person4 from '../../../assets/image/person/about-04.jpg';
 import People from "../about/people/index";
-
-
+// import FixedContent from '../../../assets/image/about-05.jpg';
 
 
 class About extends React.Component {
@@ -21,8 +20,8 @@ class About extends React.Component {
                 'position': 'Founder and CEO',
                 'info': 'Vivamus cursus leo nec sem feugiat sagittis. Duis ut feugiat odio, sit amet accumsan odio.',
                 'f': 'icon-facebook',
-                't':'icon-twitter',
-                'i':'icon-instagram'
+                't': 'icon-twitter',
+                'i': 'icon-instagram'
             },
             {
                 'img': person2,
@@ -31,8 +30,8 @@ class About extends React.Component {
                 'position': 'Executive Chef',
                 'info': 'Praesent non vulputate elit. Orci varius natoque et magnis dis parturient, nascetur ridiculus mus.',
                 'f': 'icon-facebook',
-                't':'icon-twitter',
-                'i':'icon-instagram'
+                't': 'icon-twitter',
+                'i': 'icon-instagram'
             },
             {
                 'img': person3,
@@ -41,8 +40,8 @@ class About extends React.Component {
                 'position': 'Kitchen Manager',
                 'info': 'Aenean sapien sem, ultricies sed vulputate et, auctor vel mauris. Integer sit amet diam eget est facilisis lacinia vitae.',
                 'f': 'icon-facebook',
-                't':'icon-twitter',
-                'i':'icon-instagram'
+                't': 'icon-twitter',
+                'i': 'icon-instagram'
 
             },
             {
@@ -52,12 +51,13 @@ class About extends React.Component {
                 'position': 'Culinary Director',
                 'info': 'Praesent non vulputate elit. Orci varius natoque penatibus et magnis montes, nascetur ridiculus mus.',
                 'f': 'icon-facebook',
-                't':'icon-twitter',
-                'i':'icon-instagram'
+                't': 'icon-twitter',
+                'i': 'icon-instagram'
 
             }
         ]
     }
+
     render() {
         return <>
 
@@ -68,23 +68,29 @@ class About extends React.Component {
                              description='This is about page of simple house template. You can modify and use this HTML template for your website. Total 3 HTML pages included in this template. Header image has a parallax effect.'/>
             </section>
 
-        {/* ================================== img section ==================================*/}
+            {/* ================================== start / img section ==================================*/}
 
             <section className={'G-container'}>
-                <div className={'P-w'}>
-                    {this.state.person.map((x, index)=>(
+                <div className={'P-person-wrap'}>
+                    {this.state.person.map((x, index) => (
                         <People
                             key={index}
                             person={x}
                         />
                     ))}
-                </div>
-
+                }
+            </div>
             </section>
+            {/* ================================== end / img section ==================================*/}
+            {/* ================================== start / section img fixed img ================================== */
+                // <section className={'G-container'}>
+                //     <div>
+                //
+                //     </div>
+                // </section>
+                ()
 
-        </>
+            }
+            }
 
-    }
-}
-
-export default About;
+            export default About;
