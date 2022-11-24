@@ -33,11 +33,7 @@ class Header extends React.Component {
                             </li>
                         </ul>
                     </div>
-
                 </div>
-
-
-
             </header>
         </div>
 

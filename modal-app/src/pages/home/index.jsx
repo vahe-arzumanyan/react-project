@@ -1,17 +1,16 @@
 import React from "react";
 import './style.scss';
-import StaticTitle from '../../header-static-title/index';
-import FoodBoxList from '../home/foodBoxList/index';
-import Footer from '../../footer/index';
-import img1 from '../../../assets/image/foodList/01.jpg';
-import img2 from '../../../assets/image/foodList/02.jpg';
-import img3 from '../../../assets/image/foodList/03.jpg';
-import img4 from '../../../assets/image/foodList/04.jpg';
-import img5 from '../../../assets/image/foodList/05.jpg';
-import img6 from '../../../assets/image/foodList/06.jpg';
-import img7 from '../../../assets/image/foodList/07.jpg';
-import img8 from '../../../assets/image/foodList/08.jpg';
-import avocado from '../../../assets/image/img-01.jpg';
+import StaticTitle from '../../components/header-static-title/index';
+import FoodBoxList from '../../pages/home/foodBoxList/index';
+import img1 from '../../assets/image/foodList/01.jpg';
+import img2 from '../../assets/image/foodList/02.jpg';
+import img3 from '../../assets/image/foodList/03.jpg';
+import img4 from '../../assets/image/foodList/04.jpg';
+import img5 from '../../assets/image/foodList/05.jpg';
+import img6 from '../../assets/image/foodList/06.jpg';
+import img7 from '../../assets/image/foodList/07.jpg';
+import img8 from '../../assets/image/foodList/08.jpg';
+import avocado from '../../assets/image/img-01.jpg';
 
 
 class Home extends React.Component {
@@ -84,7 +83,7 @@ class Home extends React.Component {
             }
         ],
         filterFood: [],
-        activeFoodTab: 'Salad'
+        activeFoodTab: 'All'
     }
 
     selectMenuPage = (menuName) => {
@@ -150,7 +149,7 @@ class Home extends React.Component {
 
             {/* ================================== footer ================================== */}
 
-            <Footer/>
+
 
         </>
     }

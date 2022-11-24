@@ -1,6 +1,6 @@
 import React from "react";
 import './style.scss';
-import StaticTitle from "../../header-static-title";
+import StaticTitle from "../../components/header-static-title/index";
 
 
 class Contact extends React.Component {

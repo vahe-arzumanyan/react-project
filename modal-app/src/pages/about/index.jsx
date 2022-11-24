@@ -1,12 +1,11 @@
 import React from "react";
 import './style.scss';
-import StaticTitle from "../../header-static-title";
-import person1 from '../../../assets/image/person/about-01.jpg';
-import person2 from '../../../assets/image/person/about-02.jpg';
-import person3 from '../../../assets/image/person/about-03.jpg';
-import person4 from '../../../assets/image/person/about-04.jpg';
-import People from "../about/people/index";
-// import FixedContent from '../../../assets/image/about-05.jpg';
+import person1 from '../../../src/assets/image/person/about-01.jpg';
+import person2 from '../../../src/assets/image/person/about-02.jpg';
+import person3 from '../../../src/assets/image/person/about-03.jpg';
+import person4 from '../../../src/assets/image/person/about-04.jpg';
+import People from "../../pages/about/people/index";
+import StaticTitle from "../../components/header-static-title/index";
 
 
 class About extends React.Component {
@@ -78,19 +77,15 @@ class About extends React.Component {
                             person={x}
                         />
                     ))}
-                }
-            </div>
+
+                </div>
             </section>
             {/* ================================== end / img section ==================================*/}
-            {/* ================================== start / section img fixed img ================================== */
-                // <section className={'G-container'}>
-                //     <div>
-                //
-                //     </div>
-                // </section>
-                ()
+            {/* ================================== start / section img fixed img ================================== */}
 
-            }
-            }
 
-            export default About;
+        </>
+    }
+}
+
+export default About;
