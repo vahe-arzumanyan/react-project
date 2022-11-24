@@ -2,27 +2,39 @@ import React from "react";
 import './App.scss';
 import './index';
 import './assets/style/index.scss';
-import Header from './components/header/index';
-import Home from './components/pages/home/index';
-import About from './components/pages/about/index';
-import Contact from './components/pages/contact/index';
 
-import {Switch, Route, NavLink, Link, Redirect} from 'react-router-dom';
 
 
 class App extends React.Component {
+    state={
+        title:'',
+        description:'',
+        titleColor: '',
+        describeColor:'',
+        bgColor:'',
+        borderR: '',
+        titleFontSize:16,
+        descriptionFontSize:18,
+        uploadFile:''
+    }
     render() {
-        return <>
-            <Header/>
+        return <div className={'G-container'}>
+
+            <div>
+                <label>
+                    <input className={'P-input-title'} style={}/>
+                </label>
+            </div>
 
 
-            <Switch>
-                {/*<Route path={'/home'} component={Home}/>*/}
-                {/*<Route path={'/about'} component={About}/>*/}
-                {/*<Route path={'/contact'} component={Contact}/>*/}
-                {/*<Redirect to={'/Home'}/>*/}
-            </Switch>
-        </>
+
+
+
+
+
+
+         </div>
+
     }
 }
 
