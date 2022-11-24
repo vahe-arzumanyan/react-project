@@ -17,7 +17,8 @@ class App extends React.Component {
         uploadFile: '',
         titleBgColor: '',
         descriptionBgColor: '',
-        borderRadius: 0
+        borderRadius: 0,
+        chooseFile:''
     }
     // this is title content
     handelBodyBg = (e) => {
@@ -57,16 +58,29 @@ class App extends React.Component {
         this.setState({borderRadius: e.target.value})
     }
 
+    // choose file
+
+    handelFile =(e)=>{
+        this.setState({chooseFile:e.targe.value})
+    }
+
     render() {
         //  ============================= body backgroundColor  =============================
 
         return <div className={'P-bodyBgColor'} style={{backgroundColor: this.state.bgColor}}>
             <div className={'G-container'}>
-                <label class={'G-flex G-center'}>
+                <div className={'G-flex'}>
+                    <label className={'G-flex G-center'}>
                     <p>body background color</p>
                     <input type='color' onChange={this.handelBodyBg}
-                           className={'P-input-body-bgColor'}/>
+                           className={'P-input-body-bgColor'} style={{visiblity:'hidden'}}/>
                 </label>
+                    <lebel>
+                        <p>{this.state.chooseFile}Choose File</p>
+                        <input type='file' onChange={this.handelFile}/>
+                    </lebel>
+                </div>
+
 
 
                 {/* ============================= print content ============================= */}
@@ -85,8 +99,7 @@ class App extends React.Component {
                                        onChange={this.handleTitleFontSize}/>
                             </label>
                             <label> Color
-                                <input type='color' value={this.state.titleColor}
-                                       onChange={this.handleTitleColor}/>
+                                onChange={this.handleTitleColor}/>
                             </label>
                             <label> Background Color
                                 <input type='color' value={this.state.titleBgColor}
@@ -120,7 +133,7 @@ class App extends React.Component {
 
                     {/* ============================= result content ============================= */}
 
-                    <div className={'P-result'}  style={{borderRadius:this.state.borderRadius + "px"}}>
+                    <div className={'P-result'} style={{borderRadius: this.state.borderRadius + "px"}}>
                         <div className={'G-flex G-flex-column'}>
                             <div className={'P-result-title'}>
                                 <h3>Title</h3>
