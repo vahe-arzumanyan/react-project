@@ -85,6 +85,9 @@ class Home extends React.Component {
         filterFood: [],
         activeFoodTab: 'All'
     }
+componentDidMount() {
+this.selectMenuPage(this.state.activeFoodTab)
+}
 
     selectMenuPage = (menuName) => {
         let newCategory = []
