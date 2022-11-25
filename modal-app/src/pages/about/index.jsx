@@ -6,6 +6,7 @@ import person3 from '../../../src/assets/image/person/about-03.jpg';
 import person4 from '../../../src/assets/image/person/about-04.jpg';
 import People from "../../pages/about/people/index";
 import StaticTitle from "../../components/header-static-title/index";
+import imgFixed from '../../assets/image/about-05.jpg';
 
 
 class About extends React.Component {
@@ -82,7 +83,9 @@ class About extends React.Component {
             </section>
             {/* ================================== end / img section ==================================*/}
             {/* ================================== start / section img fixed img ================================== */}
-
+            <div className={'G-container G-center'}>
+                <div className={'P-about-img-fixed'} style={{backgroundImage: `url('${imgFixed}')`}}></div>
+            </div>
 
         </>
     }
