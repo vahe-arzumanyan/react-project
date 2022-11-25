@@ -7,7 +7,7 @@ import {NavLink} from "react-router-dom";
 
 class Header extends React.Component {
     render() {
-        return <div className={'G-image-cover G-flex G-align-end P-wrapper '} style={{backgroundImage: `url('${headerImg}')`}}>
+        return <div className={'G-flex G-align-end P-wrapper '} style={{backgroundImage: `url('${headerImg}')`}}>
             <header className={'G-container'}>
                 <div className={'P-nav-bottom'}>
                     <div className={'G-flex G-justify-between'}>
