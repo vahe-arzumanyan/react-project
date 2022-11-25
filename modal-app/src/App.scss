@@ -8,10 +8,11 @@ input {
   margin-left: 40px;
 }
 
-.P-event-content{
+.P-event-content {
   width: 100%;
   justify-content: center;
 }
+
 .P-bodyBgColor {
   width: 1440px;
   height: 100vh;
@@ -43,14 +44,22 @@ input {
 
 .P-result {
   width: 50%;
-  border:2px solid red;
+  border: 2px solid red;
 }
 
-.P-result-title{
+.P-result-title {
   margin: 15px;
 }
 
-.P-result-description{
+.P-result-title p {
+  word-break: break-word;
+}
+
+.P-result-description {
   margin: 15px;
 }
 
+.P-result-description p {
+  margin: 15px;
+  word-break: break-word;
+}

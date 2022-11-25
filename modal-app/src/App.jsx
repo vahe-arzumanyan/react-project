@@ -145,7 +145,7 @@ class App extends React.Component {
                             </div>
                             <div className={'P-result-description'}>
                                 <h3>Description</h3>
-                                <p className={'hh'} style={{
+                                <p style={{
                                     fontSize: this.state.descriptionFontSize + 'px',
                                     color: this.state.descriptionColor,
                                     backgroundColor: this.state.descriptionBgColor
