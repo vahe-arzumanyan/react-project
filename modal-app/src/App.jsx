@@ -3,21 +3,27 @@ import './App.scss';
 import './index';
 import './assets/style/index.scss';
 import Top from './components/top/index';
-import Modal from './components/modal/index';
-import {Switch, Route, NavLink, Link, Redirect} from 'react-router-dom';
+import Left from './components/lorem/index';
+import Lorem from "./components/right";
 
 
 const App = () => {
-    return <> <div>
-        <Top />
-<Modal />
+    return <>
+        <div>
+            <Top/>
+            <div className={'G-flex'}>
+
+                <div className={'G-flex hh'}>
+                    <Lorem/>
+                    <Left/>
+                </div>
 
 
+            </div>
 
 
-
-    </div>
-</>
+        </div>
+    </>
 }
 
 export default App;
