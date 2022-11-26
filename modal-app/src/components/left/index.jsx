@@ -1,15 +1,17 @@
 import React from "react";
 import './style.scss';
-// import Box from '../box/index'
+import Box from '../box/index'
 
-const Right = () => {
+const Left = () => {
 
     return <>
         <div className={'P-right G-flex G-flex-wrap'}>
+            <Box />
+
         </div>
 
 
     </>
 }
 
-export default Right;
+export default Left;

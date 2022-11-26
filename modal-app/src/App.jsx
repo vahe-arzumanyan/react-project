@@ -3,8 +3,8 @@ import './App.scss';
 import './index';
 import './assets/style/index.scss';
 import Top from './components/top/index';
-import Left from './components/lorem/index';
-import Lorem from "./components/right";
+import Lorem from "./components/lorem/index";
+import Left from "./components/left/index";
 
 
 const App = () => {
@@ -14,8 +14,8 @@ const App = () => {
             <div className={'G-flex'}>
 
                 <div className={'G-flex hh'}>
-                    <Lorem/>
                     <Left/>
+                    <Lorem/>
                 </div>
 
 
