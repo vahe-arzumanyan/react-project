@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import './style.scss'
 import Box from '../box/index'
 import Left from '../left/index'
@@ -7,35 +7,30 @@ import Left from '../left/index'
 
 const Top = () => {
 
-    let arrayBox = [];
-    arrayBox.map((item) => {
-        return (
-            <Left>{item}</Left>
-        )
-    })
+    const [numbersList, setNumbersList] = useState([])
+
 
     let randomBgColor = `rgba(${Math.random() * 255},${Math.random() * 255}, ${Math.random() * 255},${Math.random()})`
 
     const handleClick = () => {
+        let randomNum = Math.floor(Math.random() * 999 + 1)
+        setNumbersList([...numbersList,randomNum]);
     }
-
 
     return <>
         <div className={'G-flex'}>
             <div className={'P-top-section'} style={{backgroundColor: `${randomBgColor}`}}>
                 <button onClick={handleClick}>Add Box</button>
             </div>
-
-            arrayBox.map((item) => {
-            return(
-            <Left>
-            key={item}
-            </Left>
-            )
-
-        }
-
-
+            <Box>
+                {console.log(numbersList)}
+                {numbersList.map((item, index) => {
+                        return <div key={index}>
+                            {item}
+                        </div>
+                    })
+                }
+            </Box>
         </div>
     </>
 
