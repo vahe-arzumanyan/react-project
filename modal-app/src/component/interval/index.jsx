@@ -1,7 +1,7 @@
 import React from "react";
 import './style.scss'
 
-class Print extends React.Component {
+class Numbered extends React.Component {
 
     state = {
         name: '',
@@ -27,7 +27,7 @@ class Print extends React.Component {
                 </label>
                 <button onClick={this.handlePrint} className={'P-click'}>Print Name</button>
             </div>
-            <div>
+            <div style={{padding:'15px'}}>
                 {this.state.usersList.map((item, index)=>{
                     return <div kay={index}>{index+1}. {item}</div>
                 })}
@@ -36,4 +36,4 @@ class Print extends React.Component {
     }
 }
 
-export default Print;
+export default Numbered;

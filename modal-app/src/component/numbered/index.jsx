@@ -1,7 +1,7 @@
 import React from "react";
 import './style.scss'
 
-class Print extends React.Component {
+class Interval extends React.Component {
 
     state = {
         minNum: '',
@@ -52,4 +52,4 @@ class Print extends React.Component {
     }
 }
 
-export default Print;
+export default Interval;
