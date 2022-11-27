@@ -1,0 +1,51 @@
+.P-sort-name{
+    margin:15px;
+}
+
+.P-sort-name input{
+    margin: 0 15px;
+}
+
+.P-sort-name-button{
+    color:red;
+    padding: 5px 10px;
+    text-align:center;
+}
+
+.P-sort-name-res{
+    width: 200px;
+    height: 300px;
+    border:1px solid brown;
+    margin: 30px;
+    text-align: center;
+}
+
+.P-sort-name-result h3{
+    color:brown;
+    font-family: Tahoma;
+    font-size: 18px;
+    font-weight: inherit;
+    padding: 5px;
+}
+
+.P-div-1{
+    color:red;
+    display: flex;
+    flex-direction: column;
+    border:1px solid red;
+}
+.P-div-2{
+    color:blue;
+    display: flex;
+    flex-direction: column;
+    border:1px solid red;
+
+}
+
+.P-big-div{
+    width: 300px;
+    height: 500px;
+    border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+}

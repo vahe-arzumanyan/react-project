@@ -1,39 +1,55 @@
 import React from "react";
 import './style.scss'
 
-class Numbered extends React.Component {
+class NumberedName extends React.Component {
 
     state = {
-        name: '',
-        usersList: []
+        minNum: '',
+        maxNum: '',
+        arrEmpty: []
     }
 
-    handleSetName = (e) => {
-        this.setState({name: e.target.value})
+    handleSetMinNum = (e) => {
+        this.setState({minNum: e.target.value})
     }
 
-    handlePrint = (e) => {
-        const {usersList} = this.state
-        usersList.push(this.state.name);
-        this.setState({usersList, name: ''})
+    handleSetMaxNum = (e) => {
+        this.setState({maxNum: e.target.value})
+    }
+
+    handleConnect = () => {
+        let {minNum, maxNum, arrEmpty} = this.state
+        let x = []
+        for (+minNum; +minNum <= +maxNum; +minNum++) {
+            x.push(minNum)
+        }
+        this.setState({arrEmpty: x})
+
     }
 
     render() {
         return <>
-            <div className={'P-input-content G-flex'}>
+            <div className={'P-num-content G-flex'}>
                 <label className={'G-flex'}>
-                    <p>Write Text</p>
-                    <input className={'P-input'} type='text' value={this.state.name} onChange={this.handleSetName}/>
+                    <p>min number</p>
+                    <input className={'P-num'} type='number' value={this.state.minNum} onChange={this.handleSetMinNum}/>
                 </label>
-                <button onClick={this.handlePrint} className={'P-click'}>Print Name</button>
+                <label className={'G-flex'}>
+                    <p>max number</p>
+                    <input className={'P-num'} type='number' value={this.state.maxNum} onChange={this.handleSetMaxNum}/>
+                </label>
+                <button onClick={this.handleConnect} className={'P-click'}>print number</button>
             </div>
-            <div style={{padding:'15px'}}>
-                {this.state.usersList.map((item, index)=>{
-                    return <div kay={index}>{index+1}. {item}</div>
+
+            <div>
+                {this.state.arrEmpty.map((item, index) => {
+                    return <span key={index} style={{color: item % 2 !== 0 ? 'red' : ''}}>{item}
+                    </span>
                 })}
             </div>
+
         </>
     }
 }
 
-export default Numbered;
+export default NumberedName;
