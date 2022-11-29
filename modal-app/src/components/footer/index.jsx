@@ -1,17 +1,11 @@
 import React from "react";
 import './style.scss';
 
-class Footer extends React.Component{
-    render() {
-        return <>
-        <footer className={'G-container'}>
-            <div className={'G-flex G-center P-footer'}>
-                <p>Copyright © 2020 Simple House | Design: TemplateMo</p>
-            </div>
-        </footer>
-            </>
-            }
-            }
+const Footer = () => {
+    return <div>
 
-            export default Footer;
+    </div>
+}
+
+export default Footer;
 
