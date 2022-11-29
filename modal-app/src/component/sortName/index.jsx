@@ -33,13 +33,14 @@ class SortName extends React.Component {
                     </button>
                 </div>
                 <div>
-                    <div className={' P-big-div'}>
+                    <div className={'P-big-div'}>
                         {this.state.nameList.map((item, index) => {
-                            return <div key={index}>{
-                                (index % 2 === 0) ? <div className={'G-flex G-flex-column P-div-1'}><p>{index} . {item}</p></div> :
-                                    <div className={'G-flex G-flex-column P-div-2'}><p>{index+1} . {item + 'sd'}</p></div>
+                            return <ol key={index}>{
+                                (item % 2 === 0) ? <li className={'G-flex G-flex-column P-div-1'}>{index+1} . {item}</li> :
+                                    (item % 2 !== 0) ?  <li className={'G-flex G-flex-column P-div-2'}>{index+1} . {item}></li>
+                                        : null
                             }
-                            </div>
+                            </ol>
                         })}
                     </div>
 

@@ -1,4 +1,6 @@
-
+body {
+   counter-reset: section;
+}
 
 .P-blue{
    color:blue;;
@@ -15,4 +17,16 @@
    width: 600px;
    height: 500px;
    border: 1px solid brown ;
+}
+
+// counter
+
+.P-red::before {
+   counter-increment: section;
+   content: "Zuyg_" counter(section) ": ";
+}
+
+.P-blue::before {
+   counter-increment: section;
+   content: "Kent_" counter(section) ": ";
 }

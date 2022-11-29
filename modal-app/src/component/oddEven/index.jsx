@@ -10,7 +10,6 @@ class OddEven extends React.Component {
 
     setInputResult = (e) => {
         this.setState({number: e.target.value})
-        // console.log(this.state.number)
     }
 
     getBtnResult = () => {
@@ -36,7 +35,7 @@ class OddEven extends React.Component {
                         return item % 2 === 0 ?
                             <p className={'P-red'} key={index}>{item}</p>
                             : item % 2 !== 0 ?
-                                <p className={'P-blue'} key={index}>{item} , {!this.isClicked ? "P-green" : "P-red"}</p> : null
+                                <p className={'P-blue'} key={index}>{item}S</p> : null
 
                     })}
 
