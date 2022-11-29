@@ -1,4 +1,4 @@
-body {
+.P-res-odd-even {
    counter-reset: section;
 }
 
@@ -21,12 +21,12 @@ body {
 
 // counter
 
-.P-red::before {
+.P-res-odd-even .P-red::before {
    counter-increment: section;
    content: "Zuyg_" counter(section) ": ";
 }
 
-.P-blue::before {
+.P-res-odd-even.P-blue::before {
    counter-increment: section;
    content: "Kent_" counter(section) ": ";
 }
