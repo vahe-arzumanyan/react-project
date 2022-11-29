@@ -36,8 +36,8 @@ class SortName extends React.Component {
                     <div className={' P-big-div'}>
                         {this.state.nameList.map((item, index) => {
                             return <div key={index}>{
-                                (index % 2 === 0) ? <div className={'G-flex G-flex-column P-div-1'}><p>{++index-1} . {item}</p></div> :
-                                    <div className={'G-flex G-flex-column P-div-2'}><p>{index+1} . {item}</p></div>
+                                (index % 2 === 0) ? <div className={'G-flex G-flex-column P-div-1'}><p>{index} . {item}</p></div> :
+                                    <div className={'G-flex G-flex-column P-div-2'}><p>{index+1} . {item + 'sd'}</p></div>
                             }
                             </div>
                         })}

@@ -29,7 +29,7 @@ class Numbered extends React.Component {
             </div>
             <div style={{padding:'15px'}}>
                 {this.state.usersList.map((item, index)=>{
-                    return <div kay={index}>{index+1}. {item}</div>
+                    return  <p kay={index}>{item}</p>
                 })}
             </div>
         </>

@@ -6,6 +6,7 @@ import NumberedName from '../../modal-app/src/component/numberedName/index'
 import Interval from '../../modal-app/src/component/interval/index'
 import Product from '../../modal-app/src/component/product/index'
 import SortName from '../../modal-app/src/component/sortName/index'
+import OddEven from "../../modal-app/src/component/oddEven/index";
 
 
 class App extends React.Component {
@@ -16,7 +17,9 @@ class App extends React.Component {
             {/*<Interval />*/}
             {/*<Product/>*/}
         {/*  exercise  */}
-        <SortName />
+        {/*<SortName />*/}
+<OddEven />
+
         </>
     }
 }
