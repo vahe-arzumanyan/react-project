@@ -9,19 +9,7 @@ const EventBtn = () => {
     const [btnUserName, setBtnUserName] = useState('')
 
 
-    // const handleSelect = (selectedType) => {
-    //     console.log(selectedType)
-    //     let selectedCategory = tapTestData.filter(item => item.categoryId === selectedType)
-    //     console.log(selectedCategory)
-    //     setContentInfo(selectedCategory[0])
-    // }
 
-    const handleResult = (resultType)=>{
-        let result = inputValue.filter((item=>result ===resultType))
-        (result[0]);
-        alert(result)
-
-    }
 
     const handleChange = (e) => {
         setInputValue(e.target.value)
@@ -40,6 +28,11 @@ const EventBtn = () => {
             </label>
             <button onClick={handleBtnClick}>enter</button>
         </div>
+
+        <div className={'G-container G-center'}>
+            {inputValue ? <EventModal data={inputValue} isShow = {true} /> : null}
+        </div>
+
 
     </div>
 }
