@@ -24,7 +24,9 @@ const EventBtn = () => {
             </label>
             <button onClick={handleBtnClick}>enter</button>
         </div>
-        {isShow && <EventModal data={inputValue} isShow = {isShow} />}
+        <div className={'G-container G-flex G-center'}>
+            {isShow && inputValue ?  <EventModal data={inputValue} isShow = {isShow} /> : ''}
+        </div>
     </div>
 }
 
