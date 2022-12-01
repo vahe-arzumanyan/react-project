@@ -1,13 +1,8 @@
-.P-event-modal-show{
-  display:block;
-}
-.P-event-modal-hide{
-  display:none;
-}
-
-.P-event-box{
+.P-show {
   width: 300px;
   height: 300px;
-  border: 1px solid #449fdb;
-  background-color: #999999;
+  border: 2px solid red;
+}
+.P-hide{
+  display: none;
 }

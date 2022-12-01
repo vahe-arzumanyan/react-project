@@ -3,12 +3,9 @@ import './style.scss'
 import EventModal from "./eventModal";
 
 const EventBtn = () => {
-    // const = [contentInfo, setContentInfo] = useState(null)
     const [inputValue, setInputValue] = useState('');
-    //btn event
-    const [btnUserName, setBtnUserName] = useState('')
-
-
+    //btn event// const [btnUserName, setBtnUserName] = useState('')
+    const [isShow, setIsShow] = useState(false)
 
 
     const handleChange = (e) => {
@@ -16,24 +13,18 @@ const EventBtn = () => {
     }
 
     const handleBtnClick = () =>{
-        setBtnUserName([btnUserName, inputValue])
-        setInputValue('')
+       setIsShow(!isShow)
     }
 
     return <div>
         <div className={'G-flex P-event-content'}>
             <label className={'G-flex'}>
                 <p>type name</p>
-                <input type="text" value={inputValue} onChange={handleChange} className={'P-input-show'}/>
+                <input type="text" value={inputValue} onChange={handleChange} className={'P-input'}/>
             </label>
             <button onClick={handleBtnClick}>enter</button>
         </div>
-
-        <div className={'G-container G-center'}>
-            {inputValue ? <EventModal data={inputValue} isShow = {true} /> : null}
-        </div>
-
-
+        {isShow && <EventModal data={inputValue} isShow = {isShow} />}
     </div>
 }
 
