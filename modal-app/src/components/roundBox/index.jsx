@@ -1,29 +1,29 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import './style.scss';
 
 const RoundBox = () => {
     const [changeBgColor, setChangeBgColor] = useState([]);
-    const [windLoader, setWInLoader]=useState(false)
-windLoader([
-window.location(setChangeBgColor)
-])
+    const [windLoader, setWinLoader]=useState(true)
 
-    changeBgColor([
-        {
-            bgColor: ` rgba(${Math.random() * 255},${Math.random() * 255}, ${Math.random() * 255},${Math.random()})
-    }
-   ] )
+
   
   useEffect(()=>{
-      if(setChangeBgColor){
-         setWInLoader 
-      }
+      setWinLoader(windLoader)
+      setTimeout(() => {
+          setChangeBgColor([
+              {
+              bgColor:
+              }
+
+          ])
+      }, 3000)
+  }, [])
   })
         
     
 
     const handelChangeBgColor = () => {
-      window.location()
+        setWinLoader(!windLoader)
     }
 
 
@@ -40,5 +40,3 @@ window.location(setChangeBgColor)
 
 export default RoundBox;
 
-)
-}

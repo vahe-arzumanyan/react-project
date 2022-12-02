@@ -1,6 +1,6 @@
 import React from "react";
 import './App.scss';
-import RoundBox from "./components/roundBox";
+import RoundBox from "./components/roundBox/index";
 
 
 
