@@ -4,7 +4,6 @@ import EventModal from "./eventModal";
 
 const EventBtn = () => {
     const [inputValue, setInputValue] = useState('');
-    //btn event// const [btnUserName, setBtnUserName] = useState('')
     const [isShow, setIsShow] = useState(false)
 
 
