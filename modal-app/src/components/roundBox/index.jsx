@@ -27,7 +27,7 @@ const RoundBox = () => {
 
     return <div className={'G-container G-flex G-center'}>
         <div className={'P-random-box G-flex G-center G-flex-column'}>
-                {handelChangeBgColor.length ? setChangeBgColor.map((index, item) => {
+                {changeBgColor ? setChangeBgColor.map((index, item) => {
                     return <Lo key={index}
                                data={item}
                     />
