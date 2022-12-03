@@ -8,9 +8,9 @@ import ShowImg from '../src/components/imgShow/index';
 
 const App = () => {
     return <div>
-{/*<RoundBox />*/}
-
-<ShowImg />
+<RoundBox />
+git
+{/*<ShowImg />*/}
     </div>
 }
 

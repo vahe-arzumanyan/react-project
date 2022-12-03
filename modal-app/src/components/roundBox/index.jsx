@@ -2,14 +2,16 @@ import React, {useEffect, useState} from "react";
 import './style.scss';
 import RefreshPage from "./refresPage/index";
 
+
 const RoundBox = () => {
-    const [contentBgColor, setContentBgColor] = useState([]);
+    const [contentBgColor, setContentBgColor] = useState('');
     const [loader, seTLoader] = useState(true)
 
     const handelChangeBgColor = () => {
         seTLoader(loader);
-        // seTLoader(...window.location(loader));
+        window.location.reload();
     }
+
 
     useEffect(() => {
         setContentBgColor([
@@ -17,7 +19,6 @@ const RoundBox = () => {
                 name: 'uf you want change background color',
                 info: 'then ...',
                 bgColor: `rgba(${Math.random() * 255},${Math.random() * 255}, ${Math.random() * 255},${Math.random()})`
-                // bgColor: `rgba(${Math.random() * 255},${Math.random() * 255}, ${Math.random() * 255},${Math.random()})`
             }
         ])
     }, [])
