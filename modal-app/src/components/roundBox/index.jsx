@@ -1,44 +1,43 @@
 import React, {useEffect, useState} from "react";
 import './style.scss';
-import Lo from "../Lo";
+import RefreshPage from "./refresPage/index";
 
 const RoundBox = () => {
-    const [changeBgColor, setChangeBgColor] = useState([]);
-    const [windLoader, setWinLoader] = useState(true)
+    const [contentBgColor, setContentBgColor] = useState([]);
+    const [loader, seTLoader] = useState(true)
 
     const handelChangeBgColor = () => {
-        setWinLoader(false)
-        }
+        seTLoader(loader);
+        // seTLoader(...window.location(loader));
+    }
 
     useEffect(() => {
-
-     if (!windLoader) {
-
-         setChangeBgColor([
-                 {
-                     name: 'uf you want change background color',
-                     info: 'then ...'
-                 }
-             ]
-         )
-
-     }})
+        setContentBgColor([
+            {
+                name: 'uf you want change background color',
+                info: 'then ...',
+                bgColor: `rgba(${Math.random() * 255},${Math.random() * 255}, ${Math.random() * 255},${Math.random()})`
+                // bgColor: `rgba(${Math.random() * 255},${Math.random() * 255}, ${Math.random() * 255},${Math.random()})`
+            }
+        ])
+    }, [])
 
 
     return <div className={'G-container G-flex G-center'}>
-        <div className={'P-random-box G-flex G-center G-flex-column'}>
-                {changeBgColor ? setChangeBgColor.map((index, item) => {
-                    return <Lo key={index}
-                               data={item}
-                    />
-                }) : null}
+        <div className={'G-flex G-center G-flex-column'}>
+            {contentBgColor ? contentBgColor.map((item, index) => {
+                return <RefreshPage
+                    key={index}
+                    data={item}
+                />
+            }) :<p>Loading</p>}
 
 
-                <button onClick={handelChangeBgColor}>click me</button>
-            </div>
+            <button onClick={handelChangeBgColor}>click me</button>
+        </div>
     </div>
 
-        }
+}
 
-        export default RoundBox;
+export default RoundBox;
 
