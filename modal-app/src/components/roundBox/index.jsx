@@ -28,7 +28,7 @@ const RoundBox = () => {
         <div className={'G-flex G-center G-flex-column'}>
             {contentBgColor ? contentBgColor.map((item, index) => {
                 return <RefreshPage
-                    // key={index}
+                    key={index}
                     data={item}
                 />
             }) :<p>Loading</p>}
