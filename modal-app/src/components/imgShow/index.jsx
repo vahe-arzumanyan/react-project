@@ -1,6 +1,12 @@
 import React, {useEffect, useState} from "react";
 import './style.scss';
-import Wrapper from "./wrapper";
+import Wrapper from "./wrapper/index";
+import img1 from '../../assets/image/img (1).jpg'
+import img2 from '../../assets/image/img (2).jpg'
+import img3 from '../../assets/image/img (3).jpg'
+import img4 from '../../assets/image/img (4).jpg'
+import img5 from '../../assets/image/img (5).jpg'
+import img6 from '../../assets/image/img (6).jpg'
 
 
 const ShowImg = () => {
@@ -13,38 +19,22 @@ const ShowImg = () => {
         setTimeout(() => {
             setShowWrapper([
                 {
-                    width: '300px',
-                    height1: '200px',
-                    padding: '15px',
-                    bgColor: 'blue',
+                   img1:'img1'
                 },
                 {
-                    width1: '300px',
-                    height1: '200px',
-                    padding1: '15px',
-                    bgColor1: 'red',
-
+                    img2:'img2'
                 },
                 {
-                    width2: '600px',
-                    height2: '200px',
-                    padding2: '15px',
-                    bgColor2: 'brown',
-
+                    img3:'img3'
                 },
                 {
-                    width3: '300px',
-                    height3: '400px',
-                    padding3: '15px',
-                    bgColor3: 'red',
-
+                    img4:'img4'
                 },
                 {
-                    width4: '100px',
-                    height4: '200px',
-                    padding4: '15px',
-                    bgColor4: 'green',
-
+                    img5:'img5'
+                },
+                {
+                    img6:'img6'
                 }
             ])
         }, 3000)
