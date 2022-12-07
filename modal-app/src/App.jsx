@@ -1,17 +1,17 @@
 import React from "react";
+// import {Switch, Route, NavLink, Link, Redirect} from 'react-router-dom';
 import './App.scss';
+import UseRefEvent from "./components/useRefFocus/index";
+import UseRefRandom from './components/randomRef/index';
 
 
-import {Switch, Route, NavLink, Link, Redirect} from 'react-router-dom';
 
 
 const App = () => {
+
     return <div>
-<p>Hello stf branch</p>
-        {/*react js default*/}
-        {/*function component*/}
-        {/*this is stf branch*/}
-        {/*css style:none*/}
+      {/*<UseRefEvent />*/}
+      <UseRefRandom />
     </div>
 }
 
