@@ -2,15 +2,17 @@ import React, {useRef, useEffect, useState} from "react";
 import './style.scss'
 
 const UseRefRandom = () => {
-    const [coordinate, setCoordinate] = useState(0);
+    const [coordinateX, setCoordinateX] = useState(0);
+    const [coordinateY, setCoordinateY] = useState(0);
     const randomRef = useRef();
 
     const handleCLick = () => {
-        if (randomRef.current) {
+      if (randomRef.current) {
             let x = randomRef.current.style.top = Math.floor(Math.random() * 500) + 1 + 'px'
             let y = randomRef.current.style.left = Math.floor(Math.random() * 500) + 1 + 'px'
-            console.log(x)
-            console.log(y)
+            console.log(x, y)
+          setCoordinateX(x);
+          setCoordinateY(y);
         }
 
     }
@@ -27,7 +29,10 @@ const UseRefRandom = () => {
             <button className={'P-btn-random'} onClick={handleCLick} ref={randomRef}>click</button>
         </div>
         <div>
-            <p></p>
+          <p>X coordinate --- {coordinateX}</p>
+          <p>Y coordinate --- {coordinateY}</p>
+
+
         </div>
     </div>
 }
