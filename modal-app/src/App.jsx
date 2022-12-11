@@ -1,5 +1,6 @@
 import React from "react";
 import './App.scss';
+import AddUsersList from "./pages/addUsersList";
 
 
 // import {Switch, Route, NavLink, Link, Redirect} from 'react-router-dom';
@@ -7,7 +8,7 @@ import './App.scss';
 
 const App = () => {
     return <div>
-
+<AddUsersList />
 
     </div>
 }
