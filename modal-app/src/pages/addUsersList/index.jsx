@@ -2,7 +2,7 @@ import React from "react";
 import './style.scss';
 
 const AddUsersList = () => {
-    return <div className={'G-contaienr'}>
+    return <div className={'G-container'}>
         <div className={'P-add-users'}>
             <label>
                 <p>First Name</p>
@@ -18,13 +18,17 @@ const AddUsersList = () => {
             </label>
             <label>
                 <p>gender</p>
-                <input type='text'/>
+               <select className={'P-gender-option'}>
+                   <option>male</option>
+                   <option>female</option>
+                   <option>other</option>
+               </select>
             </label>
             <label>
                 <p>phone number</p>
-                <input type='text'/>
+                <input type='number' placeholder={'+374'}/>
             </label>
-
+<button>add users</button>
         </div>
 
     </div>
