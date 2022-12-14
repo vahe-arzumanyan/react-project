@@ -33,6 +33,6 @@ const TodoListReducer = (state= initialState, action) => {
 
 export default TodoListReducer;
 
-// export const removeList = (index)=>{
-//     return{type:toDoActions.REMOVE_LIST, payload:index}
-// }
+export const removeList = (index)=>{
+    return{type:toDoActions.REMOVE_LIST, payload:index}
+}
