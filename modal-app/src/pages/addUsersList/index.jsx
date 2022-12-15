@@ -4,24 +4,27 @@ import {toDoActions} from '../../store/redusers/to-do/type';
 import './style.scss';
 
 const AddUsersList = () => {
-    const [userInfo, setUserInfo] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        gender: '',
-        phone: ''
-    })
 
-    let toDoList = useSelector(state => state.todoListReducer.toDoList);
+    const [userInfo, setUserInfo] = useState(
+        {
+            firstName: '',
+            lastName: '',
+            email: '',
+            gender: '',
+            phone: ''
+        }
+)
+
     const dispatch = useDispatch();
-
+    let toDoList = useSelector(state => state.todoListReducer.toDoList);
     useEffect(() => {
 
     }, [toDoList])
 
     const handleClick = () => {
         dispatch({type: toDoActions.CREATE_TO_DO, payload: userInfo})
-  setUserInfo(userInfo)
+  setUserInfo('');
+
 
 
     }
