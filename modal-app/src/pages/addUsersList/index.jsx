@@ -21,8 +21,8 @@ const AddUsersList = () => {
 
     const handleClick = () => {
         dispatch({type: toDoActions.CREATE_TO_DO, payload: userInfo})
-  // setUserInfo('')
-alert(  setUserInfo(userInfo.firstName))
+  setUserInfo(userInfo)
+
 
     }
 
@@ -63,7 +63,11 @@ alert(  setUserInfo(userInfo.firstName))
             </label>
             <button onClick={handleClick}>add users</button>
         </div>
-
+<ul>
+    {toDoList.map((item, index)=>{
+        return<li key={index} onClick={()=>deleteList(index)}>{item}</li>
+    })}
+</ul>
     </div>
 }
 
