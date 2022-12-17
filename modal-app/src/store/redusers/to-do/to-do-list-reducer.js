@@ -1,26 +1,22 @@
 import {toDoActions} from "./type";
 
 const initialState = {
-    toDoList:[]
+    toDoList: []
 }
 
-const TodoListReducer = (state= initialState, action) => {
+const TodoListReducer = (state = initialState, action) => {
     switch (action.type) {
         case toDoActions.CREATE_TO_DO: {
+
             return {...state, toDoList: [...state.toDoList, action.payload]}
         }
         case toDoActions.REMOVE_LIST: {
             return {...state, toDoList: state.toDoList.filter((item, i) => i !== action.payload)}
         }
-            return {
-                ...state,
-                toDoList: {
-                    ...state.toDoList
-                }
+
+        default: {
+            return {...state}
         }
-                default: {
-                    return{...state.toDoList}
-                }
 
     }
 
