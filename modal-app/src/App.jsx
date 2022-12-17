@@ -8,7 +8,8 @@ import AddUsersList from "./pages/addUsersList";
 
 const App = () => {
     return <div>
-<AddUsersList />
+{/*<AddUsersList />*/}
+
     </div>
 }
 
