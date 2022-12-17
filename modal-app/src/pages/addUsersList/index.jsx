@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {toDoActions} from '../../store/redusers/to-do/type';
 import './style.scss';
 
+
 const AddUsersList = () => {
 
     const [userInfo, setUserInfo] = useState(
@@ -13,30 +14,27 @@ const AddUsersList = () => {
             gender: '',
             phone: ''
         }
-)
+    )
 
     const dispatch = useDispatch();
-    let toDoList = useSelector(state => state.todoListReducer.toDoList);
+    let toDoList = useSelector(state => state.TodoListReducer.toDoList);
     useEffect(() => {
-
     }, [toDoList])
+    console.log(toDoList)
 
     const handleClick = () => {
         dispatch({type: toDoActions.CREATE_TO_DO, payload: userInfo})
-  setUserInfo({
-      firstName: '',
-      lastName: '',
-      email: '',
-      gender: '',
-      phone: ''
-  });
-
-
-
+        setUserInfo({
+            firstName: '',
+            lastName: '',
+            email: '',
+            gender: '',
+            phone: ''
+        });
     }
 
     const deleteList = (index) => {
-        dispatch({type: toDoActions.REMOVE_LIST, payload: index})
+        dispatch({type: toDoActions.REMOVE_LIST, payload: userInfo})
     }
 
     const handleChange = (e) => {
@@ -48,19 +46,19 @@ const AddUsersList = () => {
         <div className={'P-add-users'}>
             <label>
                 <p>First Name</p>
-                <input type='text' value={userInfo.firstName} onChange={handleChange}/>
+                <input type='text'  name='firstName' value={userInfo.firstName} onChange={handleChange}/>
             </label>
             <label>
                 <p>Last Name</p>
-                <input type='text' value={userInfo.lastName} onChange={handleChange}/>
+                <input type='text'  name='lastName' value={userInfo.lastName} onChange={handleChange}/>
             </label>
             <label>
                 <p>email</p>
-                <input type='email' value={userInfo.email} onChange={handleChange}/>
+                <input type='email' name='email' value={userInfo.email} onChange={handleChange}/>
             </label>
             <label>
                 <p>gender</p>
-                <select className={'P-gender-option'} value={userInfo.gender} onChange={handleChange}>
+                <select className={'P-gender-option'} name='gender'value={userInfo.gender} onChange={handleChange}>
                     <option>male</option>
                     <option>female</option>
                     <option>other</option>
@@ -72,11 +70,17 @@ const AddUsersList = () => {
             </label>
             <button onClick={handleClick}>add users</button>
         </div>
-<ul>
-    {toDoList.map((item, index)=>{
-        return<li key={index} onClick={()=>deleteList(index)}>{item}</li>
-    })}
-</ul>
+        <ul>
+            {toDoList ? toDoList.map((item, index) => {
+                return <div key={index} onClick={() => deleteList(index)}>
+                    <li>{item.firstName}</li>
+                    <li>{item.lastName}</li>
+                    <li>{item.email}</li>
+                    <li>{item.gender}</li>
+                    <li>{item.phone}</li>
+                </div>
+            }) : null}
+        </ul>
     </div>
 }
 
