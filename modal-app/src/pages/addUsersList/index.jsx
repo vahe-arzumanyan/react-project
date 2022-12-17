@@ -23,7 +23,13 @@ const AddUsersList = () => {
 
     const handleClick = () => {
         dispatch({type: toDoActions.CREATE_TO_DO, payload: userInfo})
-  setUserInfo('');
+  setUserInfo({
+      firstName: '',
+      lastName: '',
+      email: '',
+      gender: '',
+      phone: ''
+  });
 
 
 

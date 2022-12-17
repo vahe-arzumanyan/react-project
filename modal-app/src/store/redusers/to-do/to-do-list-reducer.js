@@ -2,10 +2,8 @@ import {toDoActions} from "./type";
 
 const initialState = {
     toDoList:[]
-
 }
 
-// action = {type:'', payload:''}
 const TodoListReducer = (state= initialState, action) => {
     switch (action.type) {
         case toDoActions.CREATE_TO_DO: {
