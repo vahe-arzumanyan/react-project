@@ -18,14 +18,13 @@ const AddUsersList = () => {
     )
 
     const dispatch = useDispatch();
-    let toDoList = useSelector(state => state.TodoListReducer.toDoList);
+    let userList = useSelector(state => state.TodoListReducer.userList);
 
     useEffect(() => {
-    }, [userInfo])
+    }, [userList])
 
 
     const handleClick = () => {
-
         dispatch({type: toDoActions.CREATE_TO_DO, payload: userInfo})
         setUserInfo({
             ...userInfo,
@@ -38,7 +37,8 @@ const AddUsersList = () => {
     }
 
     const deleteList = (index) => {
-        dispatch({type: toDoActions.REMOVE_LIST, payload: toDoList})
+        dispatch({type: toDoActions.REMOVE_LIST, payload: index})
+
     }
 
     const handleChange = (e) => {
@@ -75,8 +75,8 @@ const AddUsersList = () => {
             <button onClick={handleClick}>add users</button>
         </div>
         <div className={'G-flex G-flex-row G-flex-wrap'}>
-            {toDoList ? toDoList.map((user, index) => {
-                    return <UsersListUi key={index} user={user} onClick={() => deleteList(index)}/>
+            {userList ? userList.map((user, index) => {
+                    return <UsersListUi key={index} zet = {index} user={user}/>
                 })
                 : null}
         </div>
