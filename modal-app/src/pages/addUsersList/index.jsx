@@ -74,9 +74,9 @@ const AddUsersList = () => {
             </label>
             <button onClick={handleClick}>add users</button>
         </div>
-        <div className={'P-userInfo'}>
-            {toDoList ? toDoList.map((item, index) => {
-                    return <UsersListUi key={index}onClick={() => deleteList(index)}/>
+        <div className={'G-flex G-flex-row G-flex-wrap'}>
+            {toDoList ? toDoList.map((user, index) => {
+                    return <UsersListUi key={index} user={user} onClick={() => deleteList(index)}/>
                 })
                 : null}
         </div>
