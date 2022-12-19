@@ -13,9 +13,17 @@ const TodoListReducer = (state = initialState, action) => {
         case toDoActions.REMOVE_LIST: {
             return {...state, userList: state.userList.filter((item, i) => i !== action.payload)}
         }
-        // case toDoActions.EDIT_LIST:{
-        //
-        // }
+        case toDoActions.EDIT_LIST: {
+            return {
+                ...state, userList: state.userList.map((item, i) => {
+                    if (action.payload.index === i) {
+                        item = action.payload.userEdit
+                    }
+                    return item
+                })
+            }
+        }
+
 
         default: {
             return {...state}
