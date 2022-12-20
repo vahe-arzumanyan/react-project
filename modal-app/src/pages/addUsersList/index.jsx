@@ -6,7 +6,6 @@ import UsersListUi from "./UsersListUI";
 
 
 const AddUsersList = () => {
-    const [editUserInfo, setEditUserInfo] = useState('');
     const [userInfo, setUserInfo] = useState(
         {
             firstName: '',
@@ -37,9 +36,9 @@ const AddUsersList = () => {
     }
 
     const handleSave = (user) => {
-        if (editUserInfo || editUserInfo === 0) {
-            dispatch({type: toDoActions.EDIT_LIST, payload: {userList: user, index: editUserInfo}})
-            setEditUserInfo(null)
+        if (editUserInfo || editUserInfo === user) {
+            dispatch({type: toDoActions.EDIT_LIST, payload: {userEdit: user, index: editUserInfo}})
+            setEditUserInfo('')
             setUserInfo({
                 firstName: '',
                 lastName: '',
@@ -49,16 +48,7 @@ const AddUsersList = () => {
             })
         }
     }
-    const editInfo = (user, key) => {
-        setEditUserInfo(key)
-        user({
-            firstName: user.firstName,
-            lastName: user.lastName,
-            email: user.email,
-            gender: user.gender,
-            phone: user.phone
-        })
-    }
+
     const handleChange = (e) => {
         setUserInfo({...userInfo, [e.target.name]: e.target.value})
     }
@@ -98,8 +88,7 @@ const AddUsersList = () => {
         </div>
         <div className={'G-flex G-flex-row G-flex-wrap'}>
             {userList ? userList.map((user, index) => {
-                    return <UsersListUi key={index} index={index}  user={user}
-                  onClick={() => editInfo(user, index)}
+                    return <UsersListUi key={index} index={index} user={user}
                     />
                 })
                 : null}

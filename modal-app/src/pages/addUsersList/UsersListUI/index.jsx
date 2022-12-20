@@ -7,10 +7,21 @@ import {toDoActions} from "../../../store/redusers/to-do/type";
 
 const UsersListUi = ({index, user}) =>{
 
-
+    const [editUserInfo, setEditUserInfo] = useState('');
     const dispatch = useDispatch();
     const deleteList = (index) => {
         dispatch({type: toDoActions.REMOVE_LIST, payload:index
+        })
+    }
+
+    const editInfo = (user, index) => {
+        setEditUserInfo(index)
+        user({
+            firstName: user.firstName,
+            lastName: user.lastName,
+            email: user.email,
+            gender: user.gender,
+            phone: user.phone
         })
     }
 
@@ -18,7 +29,7 @@ const UsersListUi = ({index, user}) =>{
     return<div>
         <ul className={'P-userInfo'}>
             <div className={'G-flex G-justify-between'}>
-                <div>edit</div>
+                <div onClick={() => editInfo(user, index)}>edit</div>
                 <div  onClick={() => deleteList(index)}>x</div>
             </div>
             <li className={'P-firstName'}>first name_{user.firstName}</li>
