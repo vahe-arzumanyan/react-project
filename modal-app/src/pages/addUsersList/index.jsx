@@ -6,7 +6,7 @@ import UsersListUi from "./UsersListUI";
 
 
 const AddUsersList = () => {
-
+    const [editUserInfo, setEditUserInfo] = useState('');
     const [userInfo, setUserInfo] = useState(
         {
             firstName: '',
@@ -36,11 +36,29 @@ const AddUsersList = () => {
         });
     }
 
-    const deleteList = (index) => {
-        dispatch({type: toDoActions.REMOVE_LIST, payload: index})
-
+    const handleSave = (user) => {
+        if (editUserInfo || editUserInfo === 0) {
+            dispatch({type: toDoActions.EDIT_LIST, payload: {userList: user, index: editUserInfo}})
+            setEditUserInfo(null)
+            setUserInfo({
+                firstName: '',
+                lastName: '',
+                email: '',
+                gender: '',
+                phone: ''
+            })
+        }
     }
-
+    const editInfo = (user, key) => {
+        setEditUserInfo(key)
+        user({
+            firstName: user.firstName,
+            lastName: user.lastName,
+            email: user.email,
+            gender: user.gender,
+            phone: user.phone
+        })
+    }
     const handleChange = (e) => {
         setUserInfo({...userInfo, [e.target.name]: e.target.value})
     }
@@ -72,11 +90,17 @@ const AddUsersList = () => {
                 <p>phone number</p>
                 <input type='number' placeholder={'+374'} name='phone' value={userInfo.phone} onChange={handleChange}/>
             </label>
-            <button onClick={handleClick}>add users</button>
+            <div className={'G-flex G-flex-column P-btn-users'}>
+                <button onClick={handleClick}>add users</button>
+                <button onClick={handleSave}>save info</button>
+            </div>
+
         </div>
         <div className={'G-flex G-flex-row G-flex-wrap'}>
             {userList ? userList.map((user, index) => {
-                    return <UsersListUi key={index} virtualIndex = {index} user={user} userInfo={userInfo}/>
+                    return <UsersListUi key={index} index={index}  user={user}
+                  onClick={() => editInfo(user, index)}
+                    />
                 })
                 : null}
         </div>
