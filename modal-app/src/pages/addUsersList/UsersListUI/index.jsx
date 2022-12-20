@@ -5,7 +5,7 @@ import {toDoActions} from "../../../store/redusers/to-do/type";
 
 
 
-const UsersListUi = ({index, user}) =>{
+const UsersListUi = ({index, user, onClick}) =>{
 
 
     const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const UsersListUi = ({index, user}) =>{
     return<div>
         <ul className={'P-userInfo'}>
             <div className={'G-flex G-justify-between'}>
-                <div>edit</div>
+                <div onClick={onClick}>edit</div>
                 <div  onClick={() => deleteList(index)}>x</div>
             </div>
             <li className={'P-firstName'}>first name_{user.firstName}</li>
