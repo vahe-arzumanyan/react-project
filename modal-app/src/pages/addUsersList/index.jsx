@@ -76,7 +76,7 @@ const AddUsersList = () => {
         </div>
         <div className={'G-flex G-flex-row G-flex-wrap'}>
             {userList ? userList.map((user, index) => {
-                    return <UsersListUi key={index} virtualIndex = {index} user={user}/>
+                    return <UsersListUi key={index} virtualIndex = {index} user={user} userInfo={userInfo}/>
                 })
                 : null}
         </div>
