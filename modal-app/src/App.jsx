@@ -1,6 +1,7 @@
 import React from "react";
 import './App.scss';
 import AddUsersList from "./pages/addUsersList";
+import Home from "./pages/Home";
 
 
 // import {Switch, Route, NavLink, Link, Redirect} from 'react-router-dom';
@@ -8,7 +9,8 @@ import AddUsersList from "./pages/addUsersList";
 
 const App = () => {
   return <div>
-    <AddUsersList/>
+    <Home />
+    {/*<AddUsersList/>*/}
   </div>
 }
 
